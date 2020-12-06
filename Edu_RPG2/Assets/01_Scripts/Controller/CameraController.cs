@@ -8,12 +8,10 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] GameObject _player = null;
     [SerializeField] Vector3 _delta = new Vector3(0, 6, -5);
-    float distance;
     float zoomSpeed = 5;
 
     void Start()
     {
-        distance = Vector3.Distance(_player.transform.position + Vector3.up, transform.position);
         _delta = transform.position + Vector3.up - _player.transform.position;
     }
 
