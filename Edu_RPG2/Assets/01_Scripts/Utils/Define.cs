@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Define
 {
+    public enum Scene
+    {
+        Unknown,
+        Login,
+        Lobby,
+        Game,
+    }
+
     public enum CameraMode
     {
         QuaterView,
@@ -16,5 +24,13 @@ public class Define
         Press_0,
         Up_0
     }
+
+    public enum Audio
+    {
+        BGM,
+        Effect,
+        MaxCount,
+    }
+
 
 }

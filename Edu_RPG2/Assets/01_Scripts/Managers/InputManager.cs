@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager
 {
@@ -16,6 +17,12 @@ public class InputManager
 
     public void OnMouse()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        if (MouseAction == null)
+            return;
+
         if (Input.GetMouseButtonDown(0))
             MouseAction.Invoke(Define.MouseEvent.Down_0);
 
